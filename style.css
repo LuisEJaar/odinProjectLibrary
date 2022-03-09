@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+}
+
+fieldset {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+input {
+    min-width: 10%;
+}
+
+fieldset * {
+    flex-shrink: 1;
+}
+
+#catalogue {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+section > div {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+    margin: 2%;
+    width: 28%;
+    padding: 3%;
+}
+
+div > p::first-letter {
+    text-transform: capitalize;
+}
+
+section div button {
+    margin: 3% 0;
+}
+
+@media screen and (max-width:600px) {
+    fieldset {
+        display: flex;
+        flex-direction: column;
+        align-items: inherit;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    label, input {
+        width: 96%;
+        margin: 2% 1%  1% 1%;
+    }
+
+    fieldset div * {
+        width: 48%;
+    }
+
+    button[type="submit"] {
+        margin: 4% 25%;
+    }
+}
